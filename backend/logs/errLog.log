@@ -1,0 +1,14 @@
+20240301	00:55:43	5b02617c-e4c8-49cd-9267-f66612470354	ValidationError: User validation failed: id: Path `id` is required.	POST	/user	undefined
+20240301	13:07:55	ee97ef3d-14f1-4f94-96d6-7d0c2059ae8c	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle	GET	/user	undefined
+20240301	13:08:19	7311bd93-da2a-4f39-8c90-15bd5bae8644	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle	GET	/user	undefined
+20240301	18:09:41	3282505b-3372-46b1-8fa6-c7b5804d907c	ReferenceError: Cannot access 'uuid' before initialization	POST	/user	undefined
+20240301	18:22:00	171ad76f-23e8-496a-928e-6802a6a5830c	Error: Can't use $oid	PATCH	/user	undefined
+20240301	18:22:41	0556122a-38aa-4543-9867-2031567437d1	TypeError: Cannot read properties of undefined (reading 'toString')	PATCH	/user	undefined
