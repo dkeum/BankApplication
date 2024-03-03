@@ -7,6 +7,7 @@ const errorHandler = require('./middleware/errorHandler')
 const { logger, logEvents } = require('./middleware/logger')
 const mongoose = require('mongoose')
 const connectDB = require('./config/dbConn')
+const cookieParser = require('cookie-parser')
 
 
 connectDB()
@@ -14,6 +15,9 @@ connectDB()
 app.use(logger)
 app.use(cors())
 app.use(express.json())
+app.use(cookieParser())
+
+app.use('/auth',require('./routes/authRoutes'))
 app.use('/user',require('./routes/userRoutes'))
 app.use("/bank-account" , require("./routes/bankAccountRoutes"))
 app.use("/bank-transfer", require("./routes/bankTransferRoutes"))

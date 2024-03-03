@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const TransactionController = require("../controllers/TransactionController");
+const verifyJWT = require('../middleware/verifyJWT')
 
+router.use(verifyJWT)
 router
   .route("/")
   .get(TransactionController.getTransaction)

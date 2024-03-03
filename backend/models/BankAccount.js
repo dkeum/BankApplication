@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const BankAccountSchema = new mongoose.Schema({
-  // id: { type: String, require: true },
   uuid: { type: String, require: true },
   bankName: { type: String, require: true },
   userId: {type: String, require: true },

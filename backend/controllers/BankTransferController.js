@@ -3,11 +3,8 @@ const asyncHandler = require("express-async-handler")
 
 const getBankTransferbyUserId = asyncHandler(async(req,res)=>{
     
-    const {userId} = req.body
+    const userId = req.user.id
     
-    if(!userId){
-        return res.status(400).json({message:"no id provided"})
-    }
     const banktransfers = await BankTransfer.find({userId}).exec()
     
     if(!banktransfers || banktransfers.length===0 ){

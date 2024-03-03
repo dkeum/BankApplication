@@ -4,7 +4,6 @@ const BankTransferType = ['withdrawal', 'deposit']
 
 // Define the Mongoose schema for BankTransfer
 const BankTransferSchema = new mongoose.Schema({
-    id: { type: String, required: true },
     uuid: { type: String, required: true },
     userId: { type: String, required: true },
     source: { type: String, required: true },

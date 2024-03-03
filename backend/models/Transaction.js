@@ -5,7 +5,6 @@ const transactionStatusEnum = ['pending', 'incomplete', 'complete'];
 const transactionRequestStatusEnum = ["pending", "accepted", "rejected"];
 
 const TransactionSchema = new mongoose.Schema({
-    id: { type: String, required: true },
     uuid: { type: String, required: true },
     source: { type: String, required: true },
     amount: { type: Number, required: true }, 

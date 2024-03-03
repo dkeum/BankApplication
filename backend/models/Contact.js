@@ -2,7 +2,6 @@ const mongoose = require("mongoose")
 
 
 const ContactSchema = new mongoose.Schema({
-    id: {type: String, required:true },
     uuid: {type: String, required:true },
     contactId: {type: String, required:true },
     userId: {type: String, required:true },

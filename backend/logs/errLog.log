@@ -12,3 +12,11 @@
 20240301	18:09:41	3282505b-3372-46b1-8fa6-c7b5804d907c	ReferenceError: Cannot access 'uuid' before initialization	POST	/user	undefined
 20240301	18:22:00	171ad76f-23e8-496a-928e-6802a6a5830c	Error: Can't use $oid	PATCH	/user	undefined
 20240301	18:22:41	0556122a-38aa-4543-9867-2031567437d1	TypeError: Cannot read properties of undefined (reading 'toString')	PATCH	/user	undefined
+20240303	00:36:08	015739e5-c958-4e55-a9ec-aa980e1dc0c7	TypeError: Cannot read properties of undefined (reading 'id')	GET	/user	undefined
+20240303	00:47:48	49bc4ee8-314d-4e1c-a79b-b9959661f1a8	Error: secretOrPrivateKey must have a value	POST	/auth	undefined
+20240303	00:49:52	437cc27c-6253-494b-a1fc-88c281530e40	Error: secretOrPrivateKey must have a value	POST	/auth	undefined
+20240303	00:50:46	bbce7888-6726-4a87-8556-5cbfe6a69eb1	Error: secretOrPrivateKey must have a value	POST	/auth	undefined
+20240303	01:45:06	647768b2-66d9-46a4-a1a5-4c237528ae7a	TypeError: Cannot read properties of undefined (reading 'id')	GET	/user	undefined
+20240303	01:58:06	70a5871b-e61c-4e0c-9e29-1b782a2e2f2a	TypeError: Cannot read properties of undefined (reading 'id')	GET	/user	undefined
+20240303	01:59:58	9243ef1a-58a1-47fc-9eb6-d3f569abf013	TypeError: Cannot read properties of undefined (reading 'id')	GET	/user	undefined
+20240303	02:20:52	58dc153b-83ee-48df-bc99-ee9c7582b3c6	ReferenceError: requesterId is not defined	GET	/user	undefined

@@ -1,7 +1,6 @@
 const mongoose = require("mongoose")
 
 const CommentSchema = new mongoose.Schema({
-    id: {type: String, required:true },
     uuid: {type: String, required:true },
     content: {type: String, required:true },
     userId: {type: String, required:true },

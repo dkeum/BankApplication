@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const ContactController = require('../controllers/ContactController')
+const verifyJWT = require('../middleware/verifyJWT')
 
+router.use(verifyJWT)
 router.route("/:username")
  .get(ContactController.getContactByUsername)
 
@@ -9,6 +11,6 @@ router.route("/:username")
  .post(ContactController.CreateNewContact)
 
  router.route("/:contactId")
- .post(ContactController.deleteContact)
+ .delete(ContactController.deleteContact)
 
 module.exports= router
