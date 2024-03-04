@@ -9,18 +9,16 @@ const TransactionSchema = new mongoose.Schema({
     source: { type: String, required: true },
     amount: { type: Number, required: true }, 
     description: { type: String, required: true },
-    receiverID: { type: String, required: true },
-    senderID: { type: String, required: true },
+    receiverId: { type: String, required: true },
+    senderId: { type: String, required: true },
     balanceAtCompletion: { type: Number, required: false },
     transactionStatus: {
         type: String,
-        required: true,
         enum: transactionStatusEnum, // Specify allowed values using enum
         default: 'incomplete' // Set default value
     },
     transactionRequestStatus: {
         type: String,
-        required: true,
         enum: transactionRequestStatusEnum, // Specify allowed values using enum
         default: 'pending' // Set default value
     },
@@ -30,4 +28,4 @@ const TransactionSchema = new mongoose.Schema({
 
 const Transaction = mongoose.model("Transaction", TransactionSchema);
 
-module.exports = Transaction;
+module.exports = { Transaction, transactionStatusEnum, transactionRequestStatusEnum };

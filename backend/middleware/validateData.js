@@ -1,4 +1,4 @@
-import {validationResult} from 'express-validator' 
+const {validationResult} = require('express-validator')
 
 const validateMiddleware = (validations) => {
     return async (req, res, next) => {
@@ -13,4 +13,4 @@ const validateMiddleware = (validations) => {
       };
 }
 
-modele.export = validateMiddleware 
+module.exports = validateMiddleware 

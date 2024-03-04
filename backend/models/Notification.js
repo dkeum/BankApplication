@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const PaymentNotificationStatus = ["requested", "received", "incomplete"];
+const PaymentNotificationStatusEnum = ["requested", "received", "incomplete"];
 const NotificationTypeEnum = ["payment", "like", "comment"];
 
 const NotificationSchema = new mongoose.Schema({
@@ -10,7 +10,7 @@ const NotificationSchema = new mongoose.Schema({
     transactionId: { type: String, required: false },
     paymentNotificationStatus: {
         type: String,
-        enum: PaymentNotificationStatus,
+        enum: PaymentNotificationStatusEnum,
         default: "incomplete" // Set default value
     },
     notificationType: {
@@ -24,4 +24,5 @@ const NotificationSchema = new mongoose.Schema({
 
 const Notification = mongoose.model("Notification", NotificationSchema);
 
-module.exports = Notification;
+module.exports = {Notification, PaymentNotificationStatusEnum, NotificationTypeEnum};
+

@@ -1,4 +1,4 @@
-const Notification = require("../models/Notification");
+const {Notification} = require("../models/Notification");
 const asyncHandler = require("express-async-handler");
 const { v4: uuidv4 } = require("uuid");
 
