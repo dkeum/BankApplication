@@ -73,3 +73,15 @@
 20240303	02:36:58	8579f7f6-52f4-45bb-95e1-54c3e98c96dd	POST	/bank-account	undefined
 20240303	02:37:48	0949c8e7-a659-41ba-b3f0-124b7307dbda	POST	/bank-account	undefined
 20240303	02:38:14	db76fa7d-f4d2-4bde-87c0-fc00ea676f6b	POST	/bank-account	undefined
+20240303	20:15:06	d486843e-0ed9-44c0-9a17-fa1b8e6fde8a	GET	/user	undefined
+20240303	20:16:57	7c9c2039-35fd-43e3-964f-4f4a8f59a46a	POST	/auth	undefined
+20240303	20:21:02	e704aa26-1ed9-4629-8646-354fe9db91d5	POST	/auth	undefined
+20240303	20:27:09	4638586a-e4d3-4219-b3fa-eb9eb87c226f	POST	/user	undefined
+20240303	20:29:18	34e5b6af-ce8a-4b66-bcbe-30e6674a6cb6	POST	/user	undefined
+20240303	20:32:29	2afff4f0-164f-46c6-b682-acb58e179eaa	POST	/user	undefined
+20240303	20:35:11	af896290-8e6e-4d85-a81d-2694644969d7	POST	/user	undefined
+20240303	21:14:36	2389b757-5e0e-4748-ad8a-1af929ef5b0b	POST	/user	undefined
+20240303	21:15:26	9a7339fc-8fd9-477f-a66b-56decf66a43b	POST	/user	undefined
+20240303	21:16:05	4e5b93f5-c53e-4843-8b96-5f2398b8ef14	POST	/user	undefined
+20240303	21:21:12	e6100d9d-8dda-4a0b-be56-22ab49412a7d	POST	/user	undefined
+20240303	21:21:23	df1f7899-6670-4438-ba07-c87a0789702f	POST	/user	undefined

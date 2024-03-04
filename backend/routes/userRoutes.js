@@ -4,14 +4,10 @@ const userController = require("../controllers/userController");
 const verifyJWT = require('../middleware/verifyJWT')
 const validateMiddleware = require('../middleware/validateData')
 
-const searchValidation = require('../validation/validator')
-const userFieldsValidator = require('../validation/validator')
-const isUserValidator = require('../validation/validator')
-
+const { searchValidation, userFieldsValidator, isUserValidator } = require('../validation/validator');
 // Apply verifyJWT middleware to all routes except createNewUser
 router.use((req, res, next) => {
   if (req.method !== 'POST') {
-
     verifyJWT(req, res, next);
   } else {
     next();
@@ -21,15 +17,15 @@ router.use((req, res, next) => {
 router
   .route("/")
   .get(userController.getAllUsers)
-  .post(validateMiddleware(userFieldsValidator, isUserValidator), userController.createNewUser)
+  .post(validateMiddleware([userFieldsValidator, ...isUserValidator]), userController.createNewUser)
   .delete(userController.deleteUser);
 
-router.route("/search").get(validateMiddleware([searchValidation]),userController.getUserbyUsernameQuery);
+router.route("/search").get(validateMiddleware([...searchValidation]),userController.getUserbyUsernameQuery);
 
 router
   .route("/:userId")
   .get(userController.getUserbyID)
-  .patch(validateMiddleware(isUserValidator), userController.updateUser);
+  .patch(validateMiddleware([...isUserValidator]), userController.updateUser);
 
 router.route("/profile/:username").get(userController.getUserbyUsername);
 

@@ -12,7 +12,7 @@ const {
   NotificationTypeEnum: NotificationsTypeValues,
 } = require("../models/Notification");
 
-exports.searchValidation = query("q").exists();
+exports.searchValidation = [query("q").exists()];
 
 exports.userFieldsValidator = oneOf([
   check("firstName").exists(),
@@ -28,13 +28,9 @@ exports.isBankAccountValidator = [
 ];
 
 exports.isUserValidator = [
-  check("firstName").optional({ checkFalsy: true }).isString().trim(),
-  check("lastName").optional({ checkFalsy: true }).isString().trim(),
-  check("username").optional({ checkFalsy: true }).isString().trim(),
-  check("password").optional({ checkFalsy: true }).isString().trim(),
-  check("email").optional({ checkFalsy: true }).isString().trim(),
-  check("phoneNumber").optional({ checkFalsy: true }).isString().trim(),
-  check("balance").optional({ checkFalsy: true }).isNumeric().trim(),
+  body("username").isString().trim(),
+  body("password").isString().trim().isLength({ min: 4 }),
+  
 ];
 
 exports.sanitizeTransactionStatus = query("status").customSanitizer((value) => {
